@@ -1,0 +1,21 @@
+create table user(
+	id int primary key auto_increment,
+	name varchar(32) not null,
+	password varchar(64) not null,
+	email varchar(128) not null
+)default charset=utf8;
+create table message(
+	id int primary key auto_increment,
+	name varchar(32) not null,
+	title varchar(64) not null,
+	content text not null,
+	date varchar(32) not null
+)default charset=utf8;
+create table reply(
+	id int primary key auto_increment,
+	rname varchar(32) not null,
+	rcontent text not null,
+	reply int(1) not null,
+	new_id int(4) not null,
+	rdate varchar(32) not null
+)default charset=utf8;
