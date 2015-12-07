@@ -12,12 +12,21 @@
 		$num=mysql_num_rows($rs);
 		if($num){ 
 			$row=mysql_fetch_array($rs);
-			if($password===$row['password']){ 
-				$_SESSION['name']=$name;
-				echo "<script language=\"javascript\">";
-				echo "alert(\"登录成功！\\n欢迎".$_SESSION['name']."\");";
-				echo "location.href=\"message.php\"";
-				echo "</script>";
+			if($password===$row['password']){
+				if($_SESSION['code']==$_POST['code']){
+					$_SESSION['name']=$name;
+					echo "<script language=\"javascript\">";
+					echo "alert(\"登录成功！\\n欢迎".$_SESSION['name']."\");";
+					echo "location.href=\"message.php\"";
+					echo "</script>";
+				}
+				else{
+					echo "<script language=\"javascript\">";
+					echo "alert(\"验证码不正确！\");";
+					echo "location.href=\"login.php\"";
+					echo "</script>";
+					echo "<br>";
+				}
 			}else{
 				echo "<script language=\"javascript\">";
 				echo "alert(\"密码不正确！\");";

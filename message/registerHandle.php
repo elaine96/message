@@ -36,10 +36,19 @@
 				echo "<br>";
 			}
 			if($result){
-				echo "<script language=\"javascript\">";
-				echo "alert(\"注册成功！\\n请重新登录！\");";
-				echo "location.href=\"login.php\"";		
-				echo "</script>";
+				if($_SESSION['code']==$_POST['code']){
+					echo "<script language=\"javascript\">";
+					echo "alert(\"注册成功！\\n请重新登录！\");";
+					echo "location.href=\"login.php\"";		
+					echo "</script>";
+				}
+				else{
+					echo "<script language=\"javascript\">";
+					echo "alert(\"验证码不正确！\");";
+					echo "location.href=\"register.php\"";
+					echo "</script>";
+					echo "<br>";
+				}
 			}else{
 				echo "<script language=\"javascript\">";
 				echo "alert(\"注册失败！\");";

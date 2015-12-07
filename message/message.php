@@ -39,6 +39,8 @@
 		<form action="messageHandle.php" class="form-inline" method="post">
 		标题：<input  class="form-control" style="margin-left:21px" name="title" type="text" size="30"/><br/><br/>
 		内容：<textarea  class="form-control" style="margin-left:21px" name="content" rows="5" cols="25"></textarea><br/><br/>
+		验证码：<input type="text" name="code" class="form-control" placeholder="区分大小写" style="width:100px" >
+      	<img src="code.php"><br/><br/>
 		<table>
 			<td>
 				<tr><input style="margin-left:80px" type="submit" name="submit" value="添加留言" class="button" /></form></tr>

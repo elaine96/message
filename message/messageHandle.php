@@ -9,10 +9,19 @@
 		mysql_query("set names utf8");
 		$sql="insert into message(name,title,content,date) values('".$_SESSION['name']."','".$title."','".$content."','".$date."')";
 		if (mysql_query($sql)) {
-			echo "<script type=\"text/javascript\">";
-			echo "alert(\"添加留言成功！\");";
-			echo "location.href=\"message.php\"";
-			echo "</script>";
+			if($_SESSION['code']==$_POST['code']){
+				echo "<script type=\"text/javascript\">";
+				echo "alert(\"添加留言成功！\");";
+				echo "location.href=\"message.php\"";
+				echo "</script>";
+			}
+			else{
+				echo "<script language=\"javascript\">";
+				echo "alert(\"验证码不正确！\");";
+				echo "location.href=\"message.php\"";
+				echo "</script>";
+				echo "<br>";
+			}
 		}else{
 			echo "<script type=\"text/javascript\">";
 			echo "alert(\"添加留言失败！\");";

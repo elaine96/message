@@ -11,14 +11,23 @@
 		$rdate=date('Y-m-d H:i:s');
 		$sql="insert into reply(rname,rcontent,rdate,reply,new_id) values('".$rname."','".$rcontent."','".$rdate."',1,'".$id."')";
 		if (mysql_query($sql)) {
-			echo "<script type=\"text/javascript\">";
-			echo "alert(\"添加回复成功！\");";
-			echo "location.href=\"message.php\"";
-			echo "</script>";
+			if($_SESSION['code']==$_POST['code']){
+				echo "<script type=\"text/javascript\">";
+				echo "alert(\"添加回复成功！\");";
+				echo "location.href=\"message.php\"";
+				echo "</script>";
+			}
+			else{
+				echo "<script language=\"javascript\">";
+				echo "alert(\"验证码不正确！\");";
+				echo "location.href=\"message.php\"";
+				echo "</script>";
+				echo "<br>";
+			}
 		}else{
 			echo "<script type=\"text/javascript\">";
 			echo "alert(\"添加回复失败！\");";
-			echo "location.href=\"message.php?id=".$rs["id"]."\"";
+			echo "location.href=\"message.php"\"";
 			echo "</script>";
 		}
 	}else{

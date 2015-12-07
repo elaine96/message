@@ -1,7 +1,8 @@
 *{
-	font-family: 楷体 !important;
+	font-family: 楷体;
 	font-size: 20px;
 	background-color:rgba(0,0,0,0);
+	color:#3399FF;
 }
 body{
 	background:url(../img/bg.jpeg);
@@ -18,8 +19,8 @@ body{
 	background-color:rgba(0,0,0,0);
 }
 .login{
-	width: 250px;
-	height: 200px;
+	width: 300px;
+	height: 260px;
 	border-radius: 20px 20px 20px 20px;	
 	border: 1px solid #AECDE7;
 	margin-left: 300px;
@@ -46,7 +47,7 @@ body{
 .register{
 	margin-top: 20px;
 	width: 300px;
-	height: 330px;
+	height: 390px;
 	border-radius: 20px 20px 20px 20px;	
 	border: 1px solid #AECDE7;
 	margin-left: 300px;
