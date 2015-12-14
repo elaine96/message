@@ -31,7 +31,7 @@
 		内容：<textarea  class="form-control" style="margin-left:21px" name="content" rows="5" cols="25" placeholder="<?php echo $content;?>"></textarea><br/><br/>
 		回复：<textarea  class="form-control" style="margin-left:21px" name="rcontent" rows="5" cols="25"></textarea><br/><br/>
 		验证码：<input type="text" name="code" class="form-control" placeholder="区分大小写" style="width:100px" >
-      	<img src="code.php"><br/><br/>
+      	<img src="code.php" onclick="this.src='code.php?d='+Math.random();"><br/><br/>
 		<table>
 			<td>
 				<tr><input style="margin-left:80px" type="submit" name="submit" value="添加回复" class="button" /></form></tr>

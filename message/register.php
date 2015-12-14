@@ -18,16 +18,16 @@
 		&nbsp;&nbsp;&nbsp;用户名:<input type="text" name="name" class="form-control"><br/><br/>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码:<input type="password" name="password" class="form-control"><br/><br/>
 		&nbsp;确认密码:<input type="password" name="password1" class="form-control"><br/><br/>
-		&nbsp;电子邮箱:<input type="text" name="email" class="form-control"><br/><br/>
-		&nbsp;验证码：<input type="text" name="code" class="form-control" placeholder="区分大小写" style="width:100px" >
-      <img src="code.php"><br/><br/>
+		&nbsp;电子邮箱:<input type="text" name="email" class="form-control"><br/><br/>      		
+      &nbsp;验证码：<input type="text" name="code" class="form-control" placeholder="区分大小写" style="width:100px" >
+      <img src="code.php" onclick="this.src='code.php?d='+Math.random();"><br/><br/>
       <div style="text-align:center">
          <table>
             <td>
-               <tr><input type="submit" name="register" value="完成注册" class="button" style="margin-left:100px" /></form></tr>
+               <tr><input type="submit" name="register" value="完成注册" class="button"/></form></tr>
                <tr><form class="form-inline" role="form" action="login.php" method="post">
                &nbsp;&nbsp;<input type="submit" name="exit" value="退出" class="button"/></form></tr>
-            </td>
+            </td> 
          </table>
       </div>
 	</div>

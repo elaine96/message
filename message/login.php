@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,11 +22,11 @@
          &nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span>
          <input type="password" name="password" class="form-control" placeholder="密码"><br/><br/>
          验证码：<input type="text" name="code" class="form-control" placeholder="区分大小写" style="width:100px" >
-         <img src="code.php">
+         <img src="code.php" onclick="this.src='code.php?d='+Math.random();">     
          <div style="margin-top:20px">
             <table>
                <td>
-                  <tr><input style="margin-left:60px" type="submit" name="login" value="登录" class="button" /></form></tr>
+                  <tr><input type="submit" name="login" value="登录" class="button" /></form></tr>
                   <tr>
                      <form class="form-inline" role="form" action="register.php" method="post" width="30px">
                      &nbsp;&nbsp;<input type="submit" name="register" value="注册" class="button"/></form>
